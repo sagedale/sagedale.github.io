@@ -1,16 +1,29 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<!--
-**sagedale/sagedale** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<body>
 
-Here are some ideas to get you started:
+<nav>
+  <h1>🦅 Falcon Genomics</h1>
+  <ul>
+    <li><a href="index.html">About</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<section>
+  <h2>About Me</h2>
+  <img src="images/falcon1.jpg" class="cute-img">
+  <p>
+    I'm a PhD student studying gyrfalcon immunogenomics 🧬
+  </p>
+</section>
+
+</body>
+</html>
