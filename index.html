@@ -755,34 +755,83 @@
 
 <!-- ABOUT -->
 <section id="about">
+
+  <!-- BANNER PHOTO -->
+  <div class="page-banner" style="height:50vh; min-height:300px; position:relative; overflow:hidden;">
+    <img src="images/photo_banner.jpg" alt="Sage Dale in the field" style="width:100%; height:100%; object-fit:cover; object-position: center 60%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(13,34,51,0.1), rgba(13,34,51,0.55));"></div>
+    <div style="position:absolute; bottom:2.5rem; left:2.5rem; color:white;">
+      <p class="section-label" style="color:var(--glacier);">About</p>
+      <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4rem); font-weight:300;">Sage Dale</h1>
+    </div>
+  </div>
+
+  <!-- TWO-COLUMN BODY -->
   <div class="container">
-    <div class="about-grid">
+    <div class="about-grid" style="padding-top:4rem;">
+
+      <!-- LEFT: portrait + social links -->
       <div class="about-left fade-in">
-        <!-- PORTRAIT -->
         <div class="about-portrait">
           <img class="section-img" src="images/photo6.jpg" alt="Sage Dale">
         </div>
-        <div class="about-accent-bar"></div>
+
+        <!-- Social chips -->
+        <div class="tag-list" style="margin-top:1.25rem; flex-direction:column; gap:0.5rem;">
+          <a href="https://scholar.google.com" target="_blank" class="tag" style="text-decoration:none; text-align:center;">Google Scholar</a>
+          <a href="https://github.com/yourusername" target="_blank" class="tag" style="text-decoration:none; text-align:center;">GitHub</a>
+        </div>
       </div>
 
+      <!-- RIGHT: bio text -->
       <div class="about-text fade-in">
-        <p class="section-label">About Me</p>
-        <h2 class="section-title">Biologist, field researcher & conservation geneticist</h2>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-size:1.9rem; font-weight:300; color:var(--deep); line-height:1.3; margin-bottom:1.5rem;">
+          Field biologist, raptor researcher,<br>and conservation geneticist.
+        </h2>
         <p>I am a PhD student in Ecology, Evolution, and Behavior at Boise State University, working in the Conservation Genetics Lab under Dr. Stephanie Galla. My work takes me to some of the most remote corners of the planet — the Arctic tundra — where I study how birds respond to environmental challenges at the molecular level.</p>
         <p>My research sits at the intersection of ecology, immunology, and genomics. I am particularly interested in how host–pathogen dynamics shape genetic diversity in Gyrfalcons across their range and how mechanisms of immune competence underlie differential susceptibility to disease in wild populations.</p>
-        <p>Before starting my PhD, I received my Bachelor's of Science in Zoology from Oregon State University and my Master's of Raptor Biology from Boise State University. Outside of my research, I love to putter in the outdoors by bike or ski, knit, and spend time with my dog Jack.</p>
+        <p>Before starting my PhD, I received my BSc in Zoology from Oregon State University and my MS in Raptor Biology from Boise State University. Outside of research, I love to putz in the outdoors by bike or ski, knit, and spend time with my dog Jack.</p>
+
+        <p style="font-weight:500; margin-top:2rem; margin-bottom:0.75rem; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent);">Research interests</p>
         <div class="tag-list">
           <span class="tag">Avian Disease</span>
           <span class="tag">Immunogenomics</span>
           <span class="tag">Comparative Genomics</span>
           <span class="tag">Arctic Ecology</span>
           <span class="tag">Bioinformatics</span>
+          <span class="tag">Raptor Ecology</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FIELD PHOTO GRID at bottom -->
+  <div style="background:var(--midnight); margin-top:5rem; padding:4rem 0;">
+    <div class="container">
+      <p class="section-label" style="color:var(--glacier);">Field Life</p>
+      <h2 class="section-title" style="color:white; margin-bottom:2rem;">Girl on the Go</h2>
+      <div style="display:grid; grid-template-columns: 1fr 1fr 2fr; grid-template-rows: 240px 240px; gap:0.75rem;">
+        <div style="overflow:hidden; border-radius:2px;">
+          <img src="images/photo9.jpg" alt="Field photo" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="overflow:hidden; border-radius:2px;">
+          <img src="images/photo14.jpg" alt="Field photo" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="overflow:hidden; border-radius:2px; grid-row: span 2;">
+          <img src="images/photo8.jpg" alt="Field photo" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="overflow:hidden; border-radius:2px;">
+          <img src="images/photo16.jpg" alt="Field photo" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="overflow:hidden; border-radius:2px;">
+          <img src="images/photo17.jpg" alt="Field photo" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
         </div>
       </div>
     </div>
   </div>
-</section>
 
+</section>
 <!-- PHOTO STRIP — between About and Research
      Replace each .img-ph div with <img class="section-img" src="..." alt="...">
      Captions appear on hover. -->
