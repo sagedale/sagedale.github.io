@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[Sage Dale] — Arctic Ornithology & Genomics</title>
+<title>[Sage Dale] — Arctic Ecology & Conservation Genomics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -88,11 +88,16 @@
   .slide.active { opacity: 1; }
 
   /* Gradient placeholders — swap for: background-image: url('photo.jpg'); */
-  .slide-1 { background: linear-gradient(160deg, #0D2233 0%, #1B3A52 40%, #3A6080 70%, #8AAFC8 100%); }
-  .slide-2 { background: linear-gradient(200deg, #1B3A52 0%, #2E5570 30%, #5A8BA8 60%, #B8D4E8 100%); }
-  .slide-3 { background: linear-gradient(140deg, #0D2233 10%, #2E4A60 50%, #6A9AB8 80%, #D2E1ED 100%); }
-  .slide-4 { background: linear-gradient(180deg, #142B3D 0%, #1E4060 40%, #4A7A9A 70%, #A8C8DE 100%); }
-  .slide-5 { background: linear-gradient(170deg, #0A1E2D 0%, #163448 45%, #3A6A8A 75%, #90B8D0 100%); }
+ .slide-1 {
+  background-image: url('photo1.jpg');
+  background-size: cover;       /* makes image fill the container */
+  background-position: center;  /* keeps it centered */
+  background-repeat: no-repeat; /* prevents tiling */
+  }
+  .slide-2 { background-image: url('photo2.jpg');  background-size: cover; background-position: center; background-repeat: no-repeat;}
+  .slide-3 { background-image: url('photo3.jpg');  background-size: cover; background-position: center; background-repeat: no-repeat;}
+  .slide-4 { background-image: url('photo4.jpg');  background-size: cover; background-position: center; background-repeat: no-repeat;}
+  .slide-5 { background-image: url('photo5.jpg');  background-size: cover; background-position: center; background-repeat: no-repeat;}
 
   .slide-birds { position: absolute; inset: 0; pointer-events: none; }
 
