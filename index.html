@@ -329,58 +329,152 @@
   .strip-item:hover .strip-caption { opacity: 1; }
 
   /* ── RESEARCH ── */
-  #research { background: var(--snow); }
+  /* ── RESEARCH PAGE ── */
+.research-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem 3rem;
+}
 
-  .research-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
+.main-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
 
-  .research-card {
-    background: white;
-    border: 1px solid var(--ice-mid);
-    border-radius: 2px;
-    overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
-  }
+.main-project-photo img {
+  width: 100%;
+  border-radius: 2px;
+  min-height: 360px;
+  object-fit: cover;
+}
 
-  .research-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(27,58,82,0.1);
-  }
+.main-project-body .proj-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
 
-  .research-card-photo {
-    width: 100%; height: 200px;
-    overflow: hidden; position: relative; cursor: pointer;
-  }
+.proj-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 300;
+  color: var(--deep);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
 
-  .research-card-photo .img-ph,
-  .research-card-photo img {
-    height: 200px;
-    transition: transform 0.5s ease;
-  }
+.proj-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
 
-  .research-card:hover .research-card-photo .img-ph,
-  .research-card:hover .research-card-photo img { transform: scale(1.05); }
+.small-projects-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
 
-  .research-card-body { padding: 1.75rem; }
+.small-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
 
-  .research-card-body h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.35rem;
-    font-weight: 400;
-    color: var(--deep);
-    margin-bottom: 0.6rem;
-    line-height: 1.3;
-  }
+.small-card {
+  background: white;
+  border: 1px solid var(--ice-mid);
+  border-radius: 2px;
+  overflow: hidden;
+}
 
-  .research-card-body p {
-    font-size: 0.9rem;
-    color: var(--muted);
-    line-height: 1.75;
-  }
+.small-card-photo {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
 
+.small-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.small-card:hover .small-card-photo img { transform: scale(1.05); }
+
+.small-card-body { padding: 1.5rem; }
+
+.small-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--deep);
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}
+
+.small-card-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+/* ── METHODS BAR ── */
+.methods-bar {
+  background: var(--midnight);
+  padding: 5rem 0;
+  margin-top: 5rem;
+}
+
+.methods-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.method-col h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.method-col p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-project { grid-template-columns: 1fr; }
+  .small-grid { grid-template-columns: 1fr 1fr; }
+  .methods-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+@media (max-width: 600px) {
+  .small-grid { grid-template-columns: 1fr; }
+  .methods-grid { grid-template-columns: 1fr; }
+}
   /* ── PUBLICATIONS ── */
   #publications { background: white; }
 
@@ -842,34 +936,94 @@
 
 <!-- RESEARCH -->
 <section id="research">
-  <div class="container">
-    <p class="section-label">What I Study</p>
-    <h2 class="section-title">Research Interests</h2>
-    <div class="research-grid">
 
-      <div class="research-card fade-in">
-        <!-- PHOTO: replace .img-ph with <img class="section-img" src="birds.jpg" alt="Arctic birds"> -->
-        <div class="research-card-photo" onclick="openLightbox(this)">
-          <div class="img-ph" style="background:linear-gradient(150deg,#1B3A52,#5A8BA8);">[Your bird photo]</div>
+  <div class="research-wrap">
+
+    <!-- CURRENT RESEARCH — large card -->
+    <div class="main-project">
+      <div class="main-project-photo">
+        <img src="images/photo_research_main.jpg" alt="Gyrfalcon research" style="width:100%; object-fit:cover; border-radius:2px; min-height:360px;">
+      </div>
+      <div class="main-project-body">
+        <p class="proj-tag">Current Research &nbsp;·&nbsp; 2024–present</p>
+        <h2 class="proj-title">Immunogenomics and disease susceptibility in Arctic-breeding Gyrfalcons</h2>
+        <p class="proj-desc">Gyrfalcons are the apex avian predator of the Arctic, yet we know remarkably little about how host–pathogen dynamics shape their populations across their circumpolar range. My dissertation research investigates how immune gene variation underlies differential susceptibility to disease in wild Gyrfalcon populations.</p>
+        <p class="proj-desc">Using whole-genome sequencing and functional immune assays, I am characterizing MHC diversity and signatures of selection across populations sampled in Alaska, Canada, and Greenland. These findings will inform conservation management of this iconic species in the face of emerging infectious disease and rapid environmental change.</p>
+        <div class="tag-list">
+          <span class="tag">Immunogenomics</span>
+          <span class="tag">Whole-genome sequencing</span>
+          <span class="tag">Arctic fieldwork</span>
+          <span class="tag">Conservation genetics</span>
         </div>
-        <div class="research-card-body">
-          <h3>Arctic Ornithology</h3>
-          <p>I study the ecology, behavior, and life-history of birds breeding in high-latitude Arctic environments. My focal species include [shorebirds/seabirds/etc.], with fieldwork conducted in [e.g. Svalbard, Alaska, Iceland].</p>
+      </div>
+    </div>
+
+    <!-- PAST PROJECTS -->
+    <p class="small-projects-label">Past &amp; Other Projects</p>
+    <div class="small-grid">
+
+      <div class="small-card">
+        <div class="small-card-photo">
+          <img src="images/photo9.jpg" alt="Raptor banding" style="object-fit:cover;">
+        </div>
+        <div class="small-card-body">
+          <p class="proj-tag">2022–2024</p>
+          <h3 class="small-card-title">Raptor Migration Monitoring</h3>
+          <p class="small-card-desc">Diurnal and nocturnal raptor migration monitoring in Idaho and Alaska, including trapping, banding, and morphometric data collection across multiple species.</p>
+          <div class="tag-list"><span class="tag">Migration banding</span><span class="tag">HawkWatch</span></div>
         </div>
       </div>
 
-      <div class="research-card fade-in">
-        <!-- PHOTO: replace with <img class="section-img" src="lab.jpg" alt="Lab work"> -->
-        <div class="research-card-photo" onclick="openLightbox(this)">
-          <div class="img-ph" style="background:linear-gradient(150deg,#2E4A60,#6A9AB8);">[Your lab photo]</div>
+      <div class="small-card">
+        <div class="small-card-photo">
+          <img src="images/photo16.jpg" alt="Osprey processing" style="object-fit:cover;">
         </div>
-        <div class="research-card-body">
-          <h3>Avian Immunology</h3>
-          <p>I investigate how immune investment is shaped by ecological trade-offs and parasite pressure. I combine functional assays with genomic approaches to understand variation in immune defense across individuals and populations.</p>
+        <div class="small-card-body">
+          <p class="proj-tag">2021–2023</p>
+          <h3 class="small-card-title">Osprey Population Ecology</h3>
+          <p class="small-card-desc">Nest monitoring, banding, and blood sampling of Osprey to assess reproductive success and immune investment across breeding populations in the Pacific Northwest.</p>
+          <div class="tag-list"><span class="tag">Nest monitoring</span><span class="tag">Immunology</span></div>
         </div>
       </div>
 
-      <div class="research-card fade-in">
+      <div class="small-card">
+        <div class="small-card-photo">
+          <img src="images/photo17.jpg" alt="AMKE migration" style="object-fit:cover;">
+        </div>
+        <div class="small-card-body">
+          <p class="proj-tag">2020–2021</p>
+          <h3 class="small-card-title">American Kestrel Migration</h3>
+          <p class="small-card-desc">Trapping and banding of American Kestrels during fall migration to assess body condition, age, and sex ratios at a stopover site in the Pacific Northwest.</p>
+          <div class="tag-list"><span class="tag">Migration ecology</span><span class="tag">Banding</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- METHODS BAR -->
+  <div class="methods-bar">
+    <div class="methods-inner">
+      <p class="section-label" style="color:var(--glacier);">Methods &amp; Skills</p>
+      <h2 class="section-title" style="color:white; margin-bottom:2.5rem;">How I do the work</h2>
+      <div class="methods-grid">
+        <div class="method-col">
+          <h4>Field Methods</h4>
+          <p>Arctic fieldwork · Raptor banding &amp; handling · Blood sampling · Nest searching &amp; monitoring · Camera trapping</p>
+        </div>
+        <div class="method-col">
+          <h4>Genomics &amp; Bioinformatics</h4>
+          <p>Whole-genome sequencing · MHC genotyping · Population structure analyses · R · Python · bash/command line</p>
+        </div>
+        <div class="method-col">
+          <h4>Communication</h4>
+          <p>Manuscript writing · Conference presentations · Public outreach · Science communication · Wildlife photography</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
         <!-- PHOTO: replace with <img class="section-img" src="genomics.jpg" alt="Genomics"> -->
         <div class="research-card-photo" onclick="openLightbox(this)">
           <div class="img-ph" style="background:linear-gradient(150deg,#142B3D,#4A7A9A);">[Fieldwork / sequencing photo]</div>
